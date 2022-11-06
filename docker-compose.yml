@@ -2,7 +2,9 @@ version: '3'
 
 services:
   mobility-print:
-    image: mobilit-yprint
+    image: mobility-print
+    #image: snorre0815/mobility-print
+    #image: ghcr.io/snorre-k/mobility-print
     build: ./mobility-print/build/
     container_name: mobility-print
     restart: always
