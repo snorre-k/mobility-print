@@ -49,7 +49,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           # relative path to the place where source code with Dockerfile is located
-          context: idrive/build
+          context: mobility-print/build
           # Note: tags has to be all lower-case
           tags: |
             snorre0815/mobility-print:latest 
