@@ -5,8 +5,8 @@
 - docker-compose
 
 ## Available container images
-- `snorre0815/mobility-print` - DockerHub
-- `ghcr.io/snorre-k/mobility-print` - GHCR
+- `snorre0815/mobility-print:latest` - DockerHub
+- `ghcr.io/snorre-k/mobility-print:latest` - GHCR
 
 ## Build yourself
 `docker-compose build`
