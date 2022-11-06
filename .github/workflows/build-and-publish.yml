@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
     paths:
-      - 'mobility-print/build'
+      - 'mobility-print/build/**'
   schedule:
     - cron: '16 9 * * *'
   workflow_dispatch:
