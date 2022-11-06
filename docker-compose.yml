@@ -1,17 +1,16 @@
 version: '3'
 
 services:
-  mobilityprint:
-    image: snorre/mobilityprint
+  mobility-print:
+    image: mobilit-yprint
     build: ./mobility-print/build/
-    container_name: mobilityprint
+    container_name: mobility-print
     restart: always
     volumes:
-      - ./mobility-print/data:/home/papercut/pc-mobility-print/data
-      - ./mobility-print/logs:/home/papercut/pc-mobility-print/data/logs
-      - ./mobility-print/cups-config:/etc/cups
-      - ./mobility-print/cups-spool:/var/spool/cups
-      - ./mobility-print/cups-cache:/var/cache/cups
+      - papercut:/home/papercut/pc-mobility-print/data
+      - cups-conf:/etc/cups
+      - cups-spool:/var/spool/cups
+      - cups-cache:/var/cache/cups
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
 #      - /mnt/mob-pdf:/var/spool/cups-pdf/ANONYMOUS
@@ -20,6 +19,12 @@ services:
       - "9164:9164"
       - "631:631"
 #    network_mode: host
+
+volumes:
+  papercut:
+  cups-conf:
+  cups-spool:
+  cups-cache:
 
 ## For Initial CUPS Setup - please follow these steps:
 # - Enable host network
@@ -36,5 +41,4 @@ services:
 # - Disable host network
 # - Restart container - docker-compose up -d
 ## If you have configured the virtual CUPS PDF printer you can enable the volume mount of '/var/spool/cups-pdf/ANONYMOUS'
-
 
