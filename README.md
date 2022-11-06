@@ -1,5 +1,9 @@
 # PaperCut MobilityPrint together with a CUPS printserver
 
+Run Papercut Mobilityprint in a docker container together with a CUPS printserver.
+
+GitHub: https://github.com/snorre-k/mobility-print
+
 ## Requirements
 - docker
 - docker-compose
